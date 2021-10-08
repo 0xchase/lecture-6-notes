@@ -169,3 +169,15 @@ fn the_large_one<T: PartialOrd>(x: T, y: T) -> T {
 
 }
 ```
+
+## Derive example 1
+
+*open derive1.rs*
+
+Uncomment first print. What must we do to make this code compile?
+
+Derive Debug for seconds. 
+
+Uncomment second print. What must we do to make this code compile?
+
+Derive PartialEq for seconds. 

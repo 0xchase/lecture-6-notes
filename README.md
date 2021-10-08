@@ -81,7 +81,7 @@ impl Summary for Tweet {
 
 ## Trait example 2
 
-*open trait2.rs*
+*open trait1.rs*
 
 Add the following.
 
@@ -93,9 +93,16 @@ pub fn notify(item: &impl Summary) {
 
 ## Trait example 3
 
-```rust
-pub fn notify(item1: &impl Summary + Display, item2: &impl Summary + Display) {}
+*open trait3.rs*
 
-pub fn notify<T: Summary + Display>(item1: &T, item2: &T) {}
+Add the second function.
+
+```rust
+fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {}
+
+fn some_function<T, U>(t: &T, u: &U) -> i32
+    where T: Display + Clone,
+          U: Clone + Debug
+{}
 ```
 

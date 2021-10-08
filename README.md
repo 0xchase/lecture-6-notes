@@ -90,3 +90,12 @@ pub fn notify(item: &impl Summary) {
     println!("Breaking news! {}", item.summarize());
 }
 ```
+
+## Trait example 3
+
+```rust
+pub fn notify(item1: &impl Summary + Display, item2: &impl Summary + Display) {}
+
+pub fn notify<T: Summary + Display>(item1: &T, item2: &T) {}
+```
+
